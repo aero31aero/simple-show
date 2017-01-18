@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Presentation</title>
+	<style>
+		.slide{
+			display:none;
+		}
+	</style>
+</head>
+<body>
+	<div id=content>
+		<%=slides%>
+	</div>
+	<script type="text/javascript">
+		var currentslide = 0;
+		var maxslide = document.getElementsByClassName('slide').length;
+		document.getElementsByClassName('slide')[0].style.display="block";
+		function leftArrowPressed() {
+			console.log("Left.");
+		   if(currentslide!=0){
+		   		document.getElementsByClassName('slide')[currentslide--].style.display = 'none';
+		   		document.getElementsByClassName('slide')[currentslide].style.display = 'block'	
+		   }
+		}
+
+		function rightArrowPressed() {
+			console.log("Right.");
+			if(currentslide!=maxslide-1){
+		   		document.getElementsByClassName('slide')[currentslide++].style.display = 'none';
+		   		document.getElementsByClassName('slide')[currentslide].style.display = 'block'	
+		   }
+		}
+
+		document.onkeydown = function(evt) {
+		    evt = evt || window.event;
+		    switch (evt.keyCode) {
+		        case 37:
+		            leftArrowPressed();
+		            break;
+		        case 39:
+		            rightArrowPressed();
+		            break;
+		    }
+		};
+	</script>
+</body>
+</html>
