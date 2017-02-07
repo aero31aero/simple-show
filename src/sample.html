@@ -39,10 +39,10 @@
 			document.getElementsByClassName('slide')[0].style.display="block";
 			function leftArrowPressed() {
 				console.log("Left.");
-			if(currentslide!=0){
+				if(currentslide!=0){
 					document.getElementsByClassName('slide')[currentslide--].style.display = 'none';
 						document.getElementsByClassName('slide')[currentslide].style.display = 'block'
-			}
+				}
 			}
 			function rightArrowPressed() {
 				console.log("Right.");

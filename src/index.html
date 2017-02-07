@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>Presentation</title>
+		<style>
+			.slide{
+				display:none;
+			}
+			#content{
+				width:auto;
+				height: auto;
+				top:50%;
+				left:50%;
+				display: block;
+				margin: 10%;
+				margin-bottom: 0;
+				padding-left: 10%;
+				padding-right: 10%;
+				/*background: #ccc;*/
+			}
+			body{
+				overflow-y: hidden;
+				overflow-x: hidden;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				background: #59c0da;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="github-markdown.css">
+	</head>
+	<body>
+		<div id="content" class="markdown-body">
+			<div class='slide'><h1 id="web-design">Web Design</h1>
+<p>Hi. This is going to be tough.</p>
+</div><div class='slide'><h2 id="just-kidding-it-s-easy-af-if-you-try-">Just kidding. It&#39;s easy AF if you try.</h2>
+<p>In fact, this whole presentation is a webpage made in 30 minutes.</p>
+</div><div class='slide'><h2 id="web-development-is-like-puzzle-solving">Web development is like puzzle solving</h2>
+<p>You have 3 different languages, and several small tools.</p>
+<ol>
+<li>HTML</li>
+<li>CSS</li>
+<li>JS</li>
+</ol>
+</div><div class='slide'><h2 id="tools-of-a-web-designer">Tools of a Web Designer</h2>
+<ol>
+<li>Text Editor</li>
+<li>Web Browser</li>
+<li>Stack Overflow</li>
+<li>W3Schools</li>
+</ol>
+</div><div class='slide'><h2 id="what-you-ll-learn">What you&#39;ll learn</h2>
+<ol>
+<li>Basic of placing and styling different things.</li>
+<li>A simple web design framework like <code>W3.css</code>.</li>
+<li>Adding minor functionality using JavaScript.</li>
+</ol>
+</div><div class='slide'><h2 id="how-you-ll-learn">How you&#39;ll learn</h2>
+<ol>
+<li>We&#39;ll stand and hide our faces.</li>
+<li>You&#39;ll learn on your own.</li>
+<li>We&#39;ll solve your doubts.</li>
+<li>We&#39;ll get excited and teach you all random shit we happen to be think of.</li>
+</ol>
+</div><div class='slide'><h2 id="time-for-the-source-code">Time for the source code</h2>
+<p>What you&#39;re about to see is the code for this webpage. </p>
+<p>This is merely a proof of concept to show that you can also do this.</p>
+</div><div class='slide'><h2 id="what-you-ll-learn">What you&#39;ll learn</h2>
+<ol>
+<li>Designing small web pages.</li>
+<li>Understanding the following joke.</li>
+</ol>
+</div><div class='slide'><p><img src="img.jpg" alt="commit-strip"></p>
+</div>
+		</div>
+		<script type="text/javascript">
+			var currentslide = 0;
+			var maxslide = document.getElementsByClassName('slide').length;
+			document.getElementsByClassName('slide')[0].style.display="block";
+			function leftArrowPressed() {
+				console.log("Left.");
+				if(currentslide!=0){
+					document.getElementsByClassName('slide')[currentslide--].style.display = 'none';
+						document.getElementsByClassName('slide')[currentslide].style.display = 'block'
+				}
+			}
+			function rightArrowPressed() {
+				console.log("Right.");
+				if(currentslide!=maxslide-1){
+					document.getElementsByClassName('slide')[currentslide++].style.display = 'none';
+						document.getElementsByClassName('slide')[currentslide].style.display = 'block'
+			}
+			}
+			document.onkeydown = function(evt) {
+			evt = evt || window.event;
+			switch (evt.keyCode) {
+			case 37:
+			leftArrowPressed();
+			break;
+			case 39:
+			rightArrowPressed();
+			break;
+			}
+			};
+		</script>
+	</body>
+</html>

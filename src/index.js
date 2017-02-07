@@ -34,7 +34,7 @@ fs.readFile(argv.i, 'utf8', function(err, sourcefile){
 		// console.log(elem)
 		console.log("Adding Slide:",index+1);
 	})
-	console.log(html)
+	//console.log(html)
 	fs.readFile('src/sample.html','utf8',function(err, samplehtml){
 		if(err){
 			return console.log(err);
